@@ -1,6 +1,7 @@
 [build]
 builder = "nixpacks"
 buildCommand = "npm install"
+nixpacksConfigPath = "apps/api/nixpacks.toml"
 
 [deploy]
 startCommand = "node apps/api/src/index.js"
