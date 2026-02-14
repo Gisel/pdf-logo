@@ -3,4 +3,4 @@ builder = "nixpacks"
 buildCommand = "npm install"
 
 [deploy]
-startCommand = "node src/index.js"
+startCommand = "node apps/api/src/index.js"
