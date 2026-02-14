@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(timeout 5 node:*)",
+      "Bash(curl:*)",
+      "Bash(railway service:*)"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log*
+.DS_Store
+.env
+.storage
+apps/web/.next
+apps/web/node_modules
+apps/api/node_modules
+apps/worker/node_modules

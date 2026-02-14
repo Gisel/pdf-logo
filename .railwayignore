@@ -1,0 +1,7 @@
+node_modules/
+.storage/
+apps/api/.storage/
+apps/web/.next/
+*.pdf
+.env
+.env.*

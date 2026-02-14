@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@fastify/multipart": "^9.0.3",
+    "@napi-rs/canvas": "^0.1.68",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.4.296",
+    "sharp": "^0.34.3",
+    "uuid": "^11.1.0"
+  }
+}
