@@ -3,7 +3,10 @@ import { fileURLToPath } from "node:url";
 import dotenv from "dotenv";
 
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
-const repoRoot = path.resolve(currentDir, "../../../");
+// On Railway, root is apps/api. Locally, go up 3 levels to project root.
+const repoRoot = process.env.RAILWAY_ENVIRONMENT
+  ? path.resolve(currentDir, "../")  // Railway: /app/src -> /app
+  : path.resolve(currentDir, "../../../");  // Local: apps/api/src -> project root
 dotenv.config({ path: path.resolve(repoRoot, ".env") });
 dotenv.config();
 
