@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install --workspace=apps/api"
+buildCommand = "npm install"
 
 [deploy]
 startCommand = "cd apps/api && node src/index.js"
