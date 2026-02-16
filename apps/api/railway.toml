@@ -1,8 +1,6 @@
-# Railway configuration - use nixpacks builder (not dockerfile)
-# Updated: 2026-02-16
+# Railway configuration
 [build]
-builder = "nixpacks"
-buildCommand = "npm install"
+builder = "dockerfile"
 
 [deploy]
 startCommand = "node src/index.js"
