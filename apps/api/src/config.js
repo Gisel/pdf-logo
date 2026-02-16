@@ -65,21 +65,24 @@ export const config = {
       footerRatio: Number(process.env.FORMAT_A_FOOTER_RATIO || 0.112),
       bannerFit: process.env.FORMAT_A_BANNER_FIT || "contain",
       fillBackground: String(process.env.FORMAT_A_FILL_BG || "true").toLowerCase() === "true",
-      bottomOffsetPx: Number(process.env.FORMAT_A_BOTTOM_OFFSET_PX || 0)
+      bottomOffsetPx: Number(process.env.FORMAT_A_BOTTOM_OFFSET_PX || 0),
+      rightOffsetPx: Number(process.env.FORMAT_A_RIGHT_OFFSET_PX || 0)
     },
     style_b: {
       bannerPath: formatBBannerPath,
       footerRatio: Number(process.env.FORMAT_B_FOOTER_RATIO || 0.112),
       bannerFit: process.env.FORMAT_B_BANNER_FIT || "contain",
       fillBackground: String(process.env.FORMAT_B_FILL_BG || "true").toLowerCase() === "true",
-      bottomOffsetPx: Number(process.env.FORMAT_B_BOTTOM_OFFSET_PX || 0)
+      bottomOffsetPx: Number(process.env.FORMAT_B_BOTTOM_OFFSET_PX || 0),
+      rightOffsetPx: Number(process.env.FORMAT_B_RIGHT_OFFSET_PX || 0)
     },
     style_c: {
       bannerPath: formatCBannerPath,
       footerRatio: Number(process.env.FORMAT_C_FOOTER_RATIO || 0.2402),
       bannerFit: process.env.FORMAT_C_BANNER_FIT || "cover",
       fillBackground: String(process.env.FORMAT_C_FILL_BG || "false").toLowerCase() === "true",
-      bottomOffsetPx: Number(process.env.FORMAT_C_BOTTOM_OFFSET_PX || 0)
+      bottomOffsetPx: Number(process.env.FORMAT_C_BOTTOM_OFFSET_PX || 0),
+      rightOffsetPx: Number(process.env.FORMAT_C_RIGHT_OFFSET_PX || 0)
     }
   }
 };

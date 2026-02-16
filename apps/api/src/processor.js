@@ -349,6 +349,7 @@ function drawBannerFitted(page, bannerImage, targetRect, options) {
   const fillBackground = Boolean(options?.fillBackground);
   const bgColor = options?.bgColor || SOLID_FOOTER_COLOR;
   const bottomOffsetPx = Number(options?.bottomOffsetPx || 0);
+  const rightOffsetPx = Number(options?.rightOffsetPx || 0);
 
   if (fillBackground) {
     page.drawRectangle({
@@ -381,7 +382,8 @@ function drawBannerFitted(page, bannerImage, targetRect, options) {
     }
   }
 
-  const drawX = targetRect.x + ((targetRect.width - drawWidth) / 2);
+  // Positive rightOffsetPx moves banner to the right; negative moves it left.
+  const drawX = targetRect.x + ((targetRect.width - drawWidth) / 2) + rightOffsetPx;
   // Positive offset moves banner down; negative offset moves it up.
   const drawY = targetRect.y + ((targetRect.height - drawHeight) / 2) - bottomOffsetPx;
 
@@ -703,7 +705,8 @@ export async function processPdf(jobData) {
           fit: formatProfile.bannerFit,
           fillBackground: formatProfile.fillBackground,
           bgColor: SOLID_FOOTER_COLOR,
-          bottomOffsetPx: formatProfile.bottomOffsetPx
+          bottomOffsetPx: formatProfile.bottomOffsetPx,
+          rightOffsetPx: formatProfile.rightOffsetPx
         });
       } else {
         page.drawRectangle({
