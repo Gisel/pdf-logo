@@ -1,4 +1,5 @@
 # Railway configuration - use nixpacks builder (not dockerfile)
+# Updated: 2026-02-16
 [build]
 builder = "nixpacks"
 buildCommand = "npm install"
